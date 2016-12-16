@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>简单的文本编辑框</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+ 
+<div class="main">
+    
+    <div class="mainBody">
+        <div class="textarea" contenteditable="true" placeholder="正文"></div>
+    </div>
+
+    <div class="insertImg">
+        <input type="file" id="insertImg">
+        <span>插入图片</span>
+    </div>
+
+</div>
+
+
+
+<script>
+
+    $(function () {
+
+        var textarea = $(".textarea").get(0);
+
+        $("#insertImg").on("change", function () {
+            insertImg();
+        })
+
+        function insertImg () {
+
+            var file = document.getElementById("insertImg").files[0];
+            
+
+            var reader = new FileReader();
+
+            reader.readAsDataURL(file);
+
+            reader.onload = function (e) {
+                var img = document.createElement("img");
+                img.setAttribute("src", e.target.result);
+                textarea.appendChild(img);
+            }
+
+        }
+
+    })
+
+</script>
+
+
+</body>
+
+</html>
+</script>

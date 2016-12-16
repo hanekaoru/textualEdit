@@ -1,0 +1,74 @@
+*{ margin:0; padding:0}
+body{background: #16151f;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { color: #747484; } 
+input:-moz-placeholder, textarea:-moz-placeholder { color: #747484; } 
+input::-moz-placeholder, textarea::-moz-placeholder { color: #747484; } 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { color: #747484; } 
+
+
+/* 主体 */
+.main {
+    width: 90%;
+    padding: 5%;
+}
+
+.mainBody {
+    width: 100%;
+}
+
+.mainBody .textarea {
+    width: 100%;
+    min-height: 15rem;
+    resize: none;
+    outline: none;
+    color: #fff;
+    padding: 2%;
+    overflow: hidden;
+    font-size: .8rem;
+    box-sizing: border-box;
+    background: #16151f;
+    border: 1px solid #3d3d4a;
+    -webkit-user-select:text;
+    line-height: 1rem;
+}
+
+.mainBody .textarea img {
+    max-width: 100%;
+    margin: .5rem 0;
+}
+
+.insertImg {
+    width: 5rem;
+    height: 1.5rem;
+    font-size: .75rem;
+    position: relative;
+    float: right;
+    margin-top: .5rem;
+}
+
+.insertImg input {
+    width: 5rem;
+    height: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+}
+
+.insertImg span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: right;
+    background-size: 1rem;
+    color: #747484;
+}
+
+
+
+
+
